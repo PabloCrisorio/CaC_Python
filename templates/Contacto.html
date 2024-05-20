@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Css/contacto.css">
+
+    <title>Contacto</title>
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <p class="logo">GuitarraShop</p>
+            <nav>
+                <a href="../index.html">Inicio</a>
+                <a href="quienes_somos.html">Quienes Somos</a>
+                <a href="instrumentos.html">Guitarras</a>
+                <a href="Contacto.html">Contacto</a>
+                <a href="locales.html">Nuestros Locales</a>
+             </nav>
+        </div>
+    </header>
+    
+    
+    <main>
+        
+        <section id="formulario">
+
+        <style>
+            .error {
+                color: blueviolet;
+            }
+        </style>
+
+        <div class="container">
+            <h2 class="title1"></h2>Ante consultas, dudas, o bien para comunicase con nosotros pueden rellenar el siguiente formulario:</h2><br><br>
+            <form id="contactForm" onsubmit="return validateForm()">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name">
+                <span class="error" id="nameError"></span>
+                <br><br>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <span class="error" id="emailError"></span>
+                <br><br>
+    
+                <label for="phone">Teléfono:</label>
+                <input type="text" id="phone" name="phone">
+                <span class="error" id="phoneError"></span>
+                <br><br>
+    
+                <label for="subject">Asunto:</label>
+                <select id="subject" name="subject">
+                    <option value="">Selecciona un asunto</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="soporte">Soporte</option>
+                    <option value="otros">Otros</option>
+                </select>
+                <span class="error" id="subjectError"></span>
+                <br><br>
+    
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message"></textarea>
+                <span class="error" id="messageError"></span>
+                <br><br>
+    
+                <label>
+                    <input type="checkbox" id="terms" name="terms">
+                    Acepto los términos y condiciones
+                </label>
+                <span class="error" id="termsError"></span>
+                <br><br>
+    
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+    
+        <script>
+            function validateForm() {
+                let isValid = true;
+    
+                // Clear previous error messages
+                document.getElementById("nameError").innerText = "";
+                document.getElementById("emailError").innerText = "";
+                document.getElementById("phoneError").innerText = "";
+                document.getElementById("subjectError").innerText = "";
+                document.getElementById("messageError").innerText = "";
+                document.getElementById("termsError").innerText = "";
+    
+                // Validate Name
+                const name = document.getElementById("name").value;
+                if (name === "") {
+                    document.getElementById("nameError").innerText = "El nombre es obligatorio";
+                    isValid = false;
+                }
+    
+                // Validate Email
+                const email = document.getElementById("email").value;
+                if (email === "") {
+                    document.getElementById("emailError").innerText = "El email es obligatorio";
+                    isValid = false;
+                }
+    
+                // Validate Phone
+                const phone = document.getElementById("phone").value;
+                if (phone === "") {
+                    document.getElementById("phoneError").innerText = "El teléfono es obligatorio";
+                    isValid = false;
+                }
+    
+                // Validate Subject
+                const subject = document.getElementById("subject").value;
+                if (subject === "") {
+                    document.getElementById("subjectError").innerText = "El asunto es obligatorio";
+                    isValid = false;
+                }
+    
+                // Validate Message
+                const message = document.getElementById("message").value;
+                if (message === "") {
+                    document.getElementById("messageError").innerText = "El mensaje es obligatorio";
+                    isValid = false;
+                }
+    
+                // Validate Terms
+                const terms = document.getElementById("terms").checked;
+                if (!terms) {
+                    document.getElementById("termsError").innerText = "Debes aceptar los términos y condiciones";
+                    isValid = false;
+                }
+    
+                return isValid;
+            }
+        </script>
+
+    </main>
+    
+    
+    <footer>
+        <div class="container">
+            <p>&copy; GuitarraShop Arg 2024
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
