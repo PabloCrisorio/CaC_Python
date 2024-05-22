@@ -5,7 +5,6 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* TODO ESTO CHECK */
 
 button{
     font-size: 1em;
@@ -57,7 +56,6 @@ header .container{
 header nav{
     width: 100%;
     display: flex;
-    
     flex-direction: row;
     justify-content: space-around;
     padding: 25px;
@@ -66,7 +64,6 @@ header nav{
 header a{
     padding: 5px 12px;
     text-decoration: none;
-    font-size: bold;
     color: black;
 }
 
@@ -82,7 +79,7 @@ header a:hover{
     margin-top: 10px;
 }
 
-#hero{
+.hero{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -96,7 +93,6 @@ header a:hover{
     background-position: center center;
 }
 
-/* centrar el boton*/
 .container{
     text-align: center;
 }

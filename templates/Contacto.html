@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Css/contacto.css">
+    <link rel="shortcut icon" href="../img/icono.ico" type="image/x-icon">
+
 
     <title>Contacto</title>
 </head>
@@ -24,59 +26,55 @@
     
     
     <main>
+        <div class="formulario">
+            <div class="container">
+                Para comunicarse con nosotros, rellenar el siguiente formulario: <br><br>
+                <form id="contactForm" onsubmit="return validateForm()">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" placeholder="Ej. Juan Perez">
+                    <span class="error" id="nameError"></span>
+                    <br><br>
         
-        <section id="formulario">
-
-        <style>
-            .error {
-                color: blueviolet;
-            }
-        </style>
-
-        <div class="container">
-            <h2 class="title1"></h2>Ante consultas, dudas, o bien para comunicase con nosotros pueden rellenar el siguiente formulario:</h2><br><br>
-            <form id="contactForm" onsubmit="return validateForm()">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name">
-                <span class="error" id="nameError"></span>
-                <br><br>
-    
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email">
-                <span class="error" id="emailError"></span>
-                <br><br>
-    
-                <label for="phone">Teléfono:</label>
-                <input type="text" id="phone" name="phone">
-                <span class="error" id="phoneError"></span>
-                <br><br>
-    
-                <label for="subject">Asunto:</label>
-                <select id="subject" name="subject">
-                    <option value="">Selecciona un asunto</option>
-                    <option value="consulta">Consulta</option>
-                    <option value="soporte">Soporte</option>
-                    <option value="otros">Otros</option>
-                </select>
-                <span class="error" id="subjectError"></span>
-                <br><br>
-    
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message"></textarea>
-                <span class="error" id="messageError"></span>
-                <br><br>
-    
-                <label>
-                    <input type="checkbox" id="terms" name="terms">
-                    Acepto los términos y condiciones
-                </label>
-                <span class="error" id="termsError"></span>
-                <br><br>
-    
-                <button type="submit">Enviar</button>
-            </form>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Ej:juan@gmail.com">
+                    <span class="error" id="emailError"></span>
+                    <br><br>
+        
+                    <label for="phone">Teléfono (Codigo de area + Nro):</label>
+                    <input type="number" id="phone" name="phone" placeholder="Ej: 3704847524">
+                    <span class="error" id="phoneError"></span>
+                    <br><br>
+        
+                    <label for="subject">Asunto:</label>
+                    <select id="subject" name="subject">
+                        <option value="">Selecciona un asunto</option>
+                        <option value="consulta">Consulta de Guitarras</option>
+                        <option value="soporte">Compra de Guitarras</option>
+                        <option value="otros">Reparacion de Guitarras</option>
+                    </select>
+                    <span class="error" id="subjectError"></span>
+                    <br><br>
+        
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message"></textarea>
+                    <span class="error" id="messageError"></span>
+                    <br><br>
+        
+                    <div class="checkbox-container">
+                        <label for="terms">
+                            Acepto los términos y condiciones
+                            <input type="checkbox" id="terms" name="terms">
+                        </label>
+                        <span class="error" id="termsError"></span>
+                    </div>
+                    <br><br>
+        
+                    <div class="button-container">
+                        <button type="submit">Enviar</button>
+                    </div>
+                </form>
+            </div>
         </div>
-    </section>
     
         <script>
             function validateForm() {
@@ -139,12 +137,11 @@
     </main>
     
     
-    <footer>
-        <div class="container">
-            <p>&copy; GuitarraShop Arg 2024
-            </p>
-        </div>
-    </footer>
+<footer>
+    <div class="container1">
+        <p>&copy; GuitarraShop Arg 2024</p>
+    </div>
+</footer>
 
 </body>
 </html>

@@ -64,7 +64,6 @@ header nav{
 header a{
     padding: 5px 12px;
     text-decoration: none;
-    font-size: bold;
     color: black;
 }
 
@@ -112,6 +111,6 @@ header a:hover{
     margin: auto;
 }
 
-footer .container{
+footer .container1{
     text-align: right;
 }
