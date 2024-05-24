@@ -111,6 +111,28 @@ header a:hover{
     margin: auto;
 }
 
-footer .container1{
-    text-align: right;
+
+/*footer styles */
+footer {
+    display: flex;
+    background-color:  rgb(245, 245, 245);
+    width: 100%;
+    height: 7%;
+    bottom: 0;
+    left: 0;
+}
+.copyRight{
+    width: 50%;
+    text-align: center;
+    
+}
+.sociales{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+.social{
+    width: 35px;
+    height: 35px;
 }
