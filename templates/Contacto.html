@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,42 +10,40 @@
 
     <title>Contacto</title>
 </head>
+
 <body>
-    
+
     <header>
-       
-            <p class="logo">GuitarraShop</p>
-            <nav>
-                <a href="../index.html" class="button_menu">Inicio</a>
-                <a href="quienes_somos.html" class="button_menu">Quienes Somos</a>
-                <a href="instrumentos.html" class="button_menu">Guitarras</a>
-                <a href="Contacto.html" class="button_menu">Contacto</a>
-                <a href="locales.html" class="button_menu">Nuestros Locales</a>
-            </nav>
-        
+
+        <p class="logo">GuitarraShop</p>
+        <nav>
+            <a href="../index.html" class="button_menu">Inicio</a>
+            <a href="quienes_somos.html" class="button_menu">Quienes Somos</a>
+            <a href="instrumentos.html" class="button_menu">Guitarras</a>
+            <a href="Contacto.html" class="button_menu">Contacto</a>
+            <a href="locales.html" class="button_menu">Nuestros Locales</a>
+        </nav>
+
     </header>
-    
-    
+
+
     <main>
         <div class="formulario">
             <div class="container">
                 Para comunicarse con nosotros, rellenar el siguiente formulario: <br><br>
                 <form id="contactForm" onsubmit="return validateForm()">
                     <label for="name">Nombre:</label>
-                    <input type="text" id="name" name="name" placeholder="Ej. Juan Perez">
+                    <input type="text" size="50" id="name" name="name" placeholder="Ej. Juan Perez" value="nombre">
                     <span class="error" id="nameError"></span>
-                    <br><br>
-        
+                    
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Ej:juan@gmail.com">
+                    <input type="email" size="50" id="email" name="email" placeholder="Ej:juan@gmail.com" value="email">
                     <span class="error" id="emailError"></span>
-                    <br><br>
-        
+                    
                     <label for="phone">Teléfono (Codigo de area + Nro):</label>
-                    <input type="number" id="phone" name="phone" placeholder="Ej: 3704847524">
+                    <input type="number" size="50" id="phone" name="phone" placeholder="Ej: 3704847524" value="telefono">
                     <span class="error" id="phoneError"></span>
-                    <br><br>
-        
+                    
                     <label for="subject">Asunto:</label>
                     <select id="subject" name="subject">
                         <option value="">Selecciona un asunto</option>
@@ -53,13 +52,27 @@
                         <option value="otros">Reparacion de Guitarras</option>
                     </select>
                     <span class="error" id="subjectError"></span>
-                    <br><br>
-        
+                    
+                    
+                    <fieldset class="cliente">
+                        <legend>Eres cliente?</legend>
+                        <div>
+                        <input type="radio" name="cliente-si" id="clienteSi" value="si">
+                        <label for="clienteSi">Si</label>
+                        </div>
+                        <div>
+                        <input type="radio" name="cliente-no" id="clienteSi" value="no">
+                        <label for="clienteNo">No</label>
+                        </div>
+                    </fieldset>
+                        
+                    
+
                     <label for="message">Mensaje:</label>
-                    <textarea id="message" name="message"></textarea>
+                    <textarea id="message" cols="50" rows="20" name="message" value="mensaje"></textarea>
                     <span class="error" id="messageError"></span>
-                    <br><br>
-        
+                    
+
                     <div class="checkbox-container">
                         <label for="terms">
                             Acepto los términos y condiciones
@@ -67,19 +80,19 @@
                         </label>
                         <span class="error" id="termsError"></span>
                     </div>
-                    <br><br>
-        
+                    
+
                     <div class="button-container">
                         <button type="submit">Enviar</button>
                     </div>
                 </form>
             </div>
         </div>
-    
+
         <script>
             function validateForm() {
                 let isValid = true;
-    
+
                 // Clear previous error messages
                 document.getElementById("nameError").innerText = "";
                 document.getElementById("emailError").innerText = "";
@@ -87,65 +100,66 @@
                 document.getElementById("subjectError").innerText = "";
                 document.getElementById("messageError").innerText = "";
                 document.getElementById("termsError").innerText = "";
-    
+
                 // Validate Name
                 const name = document.getElementById("name").value;
                 if (name === "") {
                     document.getElementById("nameError").innerText = "El nombre es obligatorio";
                     isValid = false;
                 }
-    
+
                 // Validate Email
                 const email = document.getElementById("email").value;
                 if (email === "") {
                     document.getElementById("emailError").innerText = "El email es obligatorio";
                     isValid = false;
                 }
-    
+
                 // Validate Phone
                 const phone = document.getElementById("phone").value;
                 if (phone === "") {
                     document.getElementById("phoneError").innerText = "El teléfono es obligatorio";
                     isValid = false;
                 }
-    
+
                 // Validate Subject
                 const subject = document.getElementById("subject").value;
                 if (subject === "") {
                     document.getElementById("subjectError").innerText = "El asunto es obligatorio";
                     isValid = false;
                 }
-    
+
                 // Validate Message
                 const message = document.getElementById("message").value;
                 if (message === "") {
                     document.getElementById("messageError").innerText = "El mensaje es obligatorio";
                     isValid = false;
                 }
-    
+
                 // Validate Terms
                 const terms = document.getElementById("terms").checked;
                 if (!terms) {
                     document.getElementById("termsError").innerText = "Debes aceptar los términos y condiciones";
                     isValid = false;
                 }
-    
+
                 return isValid;
             }
         </script>
 
     </main>
-    
+
     <footer>
         <div class="copyRight">
             <p>&copy; GuitarraShop Arg 2024</p>
         </div>
         <div class="sociales">
-            <img src="/img/instagram.png" alt="Instagarm" class="social">
-            <img src="/img/whatsapp.png" alt="whatsapp" class="social">
-            <img src="/img/facebook.png" alt="facebook" class="social">
+            <a href=""><img src="/img/instagram.png" alt="Instagarm" class="social"></a>
+            <a href=""><img src="/img/whatsapp.png" alt="whatsapp" class="social"></a>
+            <a href=""><img src="/img/facebook.png" alt="facebook" class="social"></a>
         </div>
     </footer>
 
 </body>
+
 </html>
