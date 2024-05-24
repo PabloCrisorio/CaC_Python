@@ -7,58 +7,19 @@ body{
     width: 100vw;
 }
 /*header style*/
-header{
-    background-color: rgb(245, 245, 245);
-    height: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
-.logo{
-    margin: 0;
-    padding: 5px 10px;
-    font-weight: bold;
-    color: blueviolet;
-    font-size: 4em;
-}
-nav{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 10px 0px;
-}
-
-.button_menu{
-    background-color: rgba(128, 109, 7, 0.26);
-    border-radius: 12px;
-    padding: 5px 12px;
-    text-decoration: none;
-    color: black;
-}
 .button_menu:hover{
     box-shadow: 0px 0px 30px 3px rgba(0,0,0,0.59);   
     color: blueviolet; 
 }
 
-button{
-    font-size: 1em;
-    font-weight: bold;
-    padding: 10px 10px;
-    border-radius: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-    color: white;
-    background-color: blueviolet;
-}
 
 
+/*card*/
 
 .title{
     text-align: center;
-    font-size: 30px;
+    font-size: 15px;
     color: black;
     margin-top: 10px;
 }
@@ -72,9 +33,13 @@ button{
 }
 
 
-.container .carta{
-    width: 350px;
-    height: 600px;
+.carta{
+    width: 320px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     border-radius: 15px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     overflow: hidden;
@@ -83,28 +48,32 @@ button{
     transition: all 0.25s;
 }
 
-.container .carta:hover{
+
+.carta img{
+    width: 80%;
+    height: auto;
+}
+
+.carta h4{
+    font-weight: 300;
+    color: black;
+}
+
+
+button{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: blueviolet;
+}
+.carta:hover{
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
-
-.container .carta img{
-    width: 330px;
-    height: 330px;
-}
-
-.container .carta h4{
-    font-weight: 300;
-    color: black;
-}
-
-.container .carta p{
-    padding: 0 1rem;
-    font-size: 16px;
-    font-weight: 300;
-    color: black;
-}
-
 
 /*footer styles */
 footer {
@@ -115,18 +84,176 @@ footer {
     bottom: 0;
     left: 0;
 }
-.copyRight{
-    width: 50%;
-    text-align: center;
-    
-}
+
 .sociales{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 50%;
 }
-.social{
-    width: 35px;
-    height: 35px;
+
+
+@media screen and (max-width:  426px)  { 
+    header{
+        background-color: rgb(245, 245, 245);
+        height: 35%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    nav{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 10px 0px;
+    }
+    .button_menu{
+        background-color: rgba(128, 109, 7, 0.26);
+        border-radius: 12px;
+        padding: 5px 12px;
+        font-size:10px;
+        text-decoration: none;
+        color: black;
+        margin: 2px;
+    }
+    .logo{
+        margin: 0;
+        padding: 5px 10px;
+        font-weight: bold;
+        color: blueviolet;
+        font-size: 2.5em;
+    }
+    .carta p{
+        padding: 0 1rem;
+        font-size: 13px;
+        font-weight: 300;
+        color: black;
+    }
+    .copyRight{
+        width: 50%;
+        text-align: center;
+        font-size: 10px;
+    }
+    .social{
+        width: 20px;
+        height: 20px;
+    }
+    .social:hover{
+        width: 25px;
+        height: 25px;
+        box-shadow:0px 0px 30px 3px rgba(0,0,0,0.59);
+        
+    }
+}
+@media screen and (min-width: 426px)  { 
+    header{
+        background-color: rgb(245, 245, 245);
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0px;
+    }
+    .button_menu{
+        background-color: rgba(128, 109, 7, 0.26);
+        border-radius: 12px;
+        padding: 5px 12px;
+        text-decoration: none;
+        color: black;
+    }
+    .logo{
+        margin: 0;
+        padding: 5px 10px;
+        font-weight: bold;
+        color: blueviolet;
+        font-size: 4em;
+    }
+    .carta p{
+        padding: 0 1rem;
+        font-size: 15px;
+        font-weight: 300;
+        color: black;
+    }
+    .copyRight{
+        width: 50%;
+        text-align: center;
+        font-size: 15px;
+    }
+    .social{
+        width: 25px;
+        height: 25px;
+    }
+    .social:hover{
+        width: 35px;
+        height: 35px;
+        box-shadow:0px 0px 30px 3px rgba(0,0,0,0.59);
+        
+    }
+}
+@media screen and (min-width:  769px)  { 
+    header{
+        background-color: rgb(245, 245, 245);
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    
+    .logo{
+        margin: 0;
+        padding: 5px 10px;
+        font-weight: bold;
+        color: blueviolet;
+        font-size: 4em;
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0px;
+    }
+    
+    .button_menu{
+        background-color: rgba(128, 109, 7, 0.26);
+        border-radius: 12px;
+        padding: 5px 12px;
+        text-decoration: none;
+        color: black;
+    }
+    .carta p{
+        padding: 0 1rem;
+        font-size: 16px;
+        font-weight: 300;
+        color: black;
+    }
+    .copyRight{
+        width: 50%;
+        text-align: center;
+        font-size: 1em;
+    }
+    .social{
+        width: 35px;
+        height: 35px;
+    }
+    .social:hover{
+        width: 45px;
+        height: 45px;
+        box-shadow:0px 0px 30px 3px rgba(0,0,0,0.59);
+        
+    }
 }
