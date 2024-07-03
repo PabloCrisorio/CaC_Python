@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/ingresar_producto.css">
+    <link rel="stylesheet" href="../css/tabla_productos.css">
+    <title>Registrar</title>
+</head>
+
+<body>
+
+    <header>
+
+        <h1 class="logo">GuitarraShop</h1>
+
+        <nav>
+            <a href="index.html" class="button_menu">Inicio</a>
+            <a href="templates/quienes_somos.html" class="button_menu">Quienes Somos</a>
+            <a href="templates/instrumentos.html" class="button_menu">Guitarras</a>
+            <a href="templates/Contacto.html" class="button_menu">Contacto</a>
+            <a href="templates/locales.html" class="button_menu">Nuestros Locales</a>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <section>
+            <div class="container-form">
+
+                <form action="">
+                    <div class="entrada">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="precio">Precio:</label>
+                        <input type="number" name="precio" id="precio">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="stock">Stock:</label>
+                        <input type="number" name="stock" id="stock">
+                    </div>
+
+                    <div class="entrada">
+                        <label for="imagen">Imagen:</label>
+                        <input type="text" name="imagen" id="imagen">
+                    </div>
+
+                    <div class="entrada">
+                        <button class="modificar" type="button" onclick="guardar()">Guardar</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer></footer>
+
+    <script src="../js/ingresar_producto.js"></script>
+
+</body>
+
+</html>
