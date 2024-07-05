@@ -3,7 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        url:"http://127.0.0.1:5000/productos", 
+        url:"http://pcrisorio.pythonanywhere.com/productos", 
         productos:[],
         error:false,
         cargando:true

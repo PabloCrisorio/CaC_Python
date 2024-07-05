@@ -4,11 +4,13 @@ let resultado = {};
 for (const [nombre, valor] of datos) {
     resultado[nombre] = valor;
     resultado[precio] = valor;
+    resultado[tipo]=valor;
     resultado[stock] = valor
     resultado[imagen] = valor
 }
 document.getElementById("id").value = resultado["id"]
 document.getElementById("nombre").value = resultado["nombre"]
 document.getElementById("precio").value = resultado["precio"]
+document.getElementById("tipo").value = resultado["tipo"]
 document.getElementById("stock").value = resultado["stock"]
 document.getElementById("imagen").value = resultado["imagen"]
