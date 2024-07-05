@@ -29,7 +29,7 @@
         <section class="container">
             <div id="app">
 
-                <!-- Botón Nuevo -->
+
                 <a class="nuevo" href="templates/ingresar_producto.html">Nuevo</a>
 
                 <section v-if="error">Lo sentimos se produjo un error</section>
@@ -48,6 +48,7 @@
                                         <th>ID</th>
                                         <th>Nombre</th>
                                         <th>Precio</th>
+                                        <th>Tipo</th>
                                         <th>Stock</th>
                                         <th>Imagen</th>
                                         <th>Acciones</th>
@@ -60,6 +61,7 @@
                                         <td>{{producto.id}}</td>
                                         <td>{{producto.nombre}}</td>
                                         <td>{{producto.precio}}</td>
+                                        <td>{{producto.tipo}}</td>
                                         <td>{{producto.stock}}</td>
                                         <td>
                                             <img :src="producto.imagen" alt="">
@@ -68,8 +70,7 @@
                                             <button type="button" v-on:click="eliminar(producto.id)">Eliminar</button>
                                         </td>
                                         <td>
-                                            <a class="boton"
-                                                :href="'templates/editar_producto.html?id='+ producto.id+'&nombre=' +producto.nombre+ '&precio='+producto.precio+'&stock='+producto.stock +  '&imagen='+producto.imagen">Editar</a>
+                                            <a class="boton" :href="'editar_producto.html?id='+ producto.id+'&nombre=' +producto.nombre+'&tipo='+producto.tipo+'&precio='+producto.precio+'&stock='+producto.stock +  '&imagen='+producto.imagen">Editar</a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -86,7 +87,7 @@
     <footer></footer>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="js/tabla_productos.js"></script>
+    <script src="../js/tabla_productos.js"></script>
     
 </body>
 
