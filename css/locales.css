@@ -98,7 +98,8 @@ button {
 /*footer styles */
 footer {
   display: flex;
-  background-color: rgb(245, 245, 245);
+  background-color: blueviolet;
+  color: white;
   width: 100%;
   height: 7%;
   bottom: 0;
