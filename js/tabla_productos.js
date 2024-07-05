@@ -3,7 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-        url:"http://pcrisorio.pythonanywhere.com/productos", 
+        url:"https://pcrisorio.pythonanywhere.com/productos", 
         productos:[],
         error:false,
         cargando:true
@@ -30,7 +30,7 @@ const { createApp } = Vue
         
         eliminar(id) {
             
-            const url = 'http://localhost:5000/borrar/'+id;
+            const url = 'https://pcrisorio.pythonanywhere.com/borrar/'+id;
             var options = {
                 method: 'DELETE',
                 
