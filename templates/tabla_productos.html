@@ -64,7 +64,7 @@
                                         <td>{{producto.tipo}}</td>
                                         <td>{{producto.stock}}</td>
                                         <td>
-                                            <img :src="producto.imagen" alt="">
+                                            <img :src="{{producto.imagen}}" alt="">
                                         </td>
                                         <td>
                                             <button type="button" v-on:click="eliminar(producto.id)">Eliminar</button>
