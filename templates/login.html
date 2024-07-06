@@ -24,7 +24,7 @@
     <div class="login-box">
       <h1>Iniciar sesión</h1>
       <form
-        action="https://testweb--guitarstoorefromgit.netlify.app/templates/tabla_productos"
+        
         method="post"
         onsubmit="return validarFormulario()"
       >
@@ -70,7 +70,8 @@
         const contrasena = contrasenaInput.value;
 
         if (usuario === "codo" && contrasena === "acodo") {
-          return true; // Continuar con el envío del formulario
+          location.href ='https://pablomonteserin.com';
+          //return true; // Continuar con el envío del formulario
         } else {
           alert("Usuario o contraseña incorrectos. Inténtalo de nuevo.");
           return false; // Detener el envío del formulario
