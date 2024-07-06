@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/login.css" />
+    <link rel="shortcut icon" href="img/icono.ico" type="image/x-icon" />
+
+    <title>GuitarraShop</title>
+  </head>
+  <body>
+    <header>
+      <p class="logo">GuitarraShop</p>
+      <nav>
+        <a href="../index.html" class="button_menu">Inicio</a>
+        <a href="quienes_somos.html" class="button_menu">Quienes Somos</a>
+        <a href="instrumentos.html" class="button_menu">Guitarras</a>
+        <a href="Contacto.html" class="button_menu">Contacto</a>
+        <a href="locales.html" class="button_menu">Nuestros Locales</a>
+        <a href="login.html" class="button_menu">Log in</a>
+      </nav>
+    </header>
+
+    <div class="login-box">
+      <h1>Iniciar sesión</h1>
+      <form
+        action="tabla_productos.html"
+        method="post"
+        onsubmit="return validarFormulario()"
+      >
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required />
+
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required />
+
+        <input type="submit" value="Iniciar sesión" />
+      </form>
+      <h3>Los datos para ingresar son:</h3>
+      <p>Usuario: codo</p>
+      <p>contraseña: acodo</p>
+      <p>Si no func apresione el boton admin</p>
+      <button>
+        <a href="tabla_productos.html">Admin</a>
+      </button>
+    </div>
+
+    <footer>
+      <div class="copyRight">
+        <p>&copy; GuitarraShop Arg 2024</p>
+      </div>
+      <div class="sociales">
+        <a href=""
+          ><img src="/img/instagram.png" alt="Instagarm" class="social"
+        /></a>
+        <a href=""
+          ><img src="/img/whatsapp.png" alt="whatsapp" class="social"
+        /></a>
+        <a href=""
+          ><img src="/img/facebook.png" alt="facebook" class="social"
+        /></a>
+      </div>
+    </footer>
+    <script>
+      function validarFormulario() {
+        const usuarioInput = document.getElementById("usuario");
+        const contrasenaInput = document.getElementById("contrasena");
+
+        const usuario = usuarioInput.value;
+        const contrasena = contrasenaInput.value;
+
+        if (usuario === "codo" && contrasena === "acodo") {
+          return true; // Continuar con el envío del formulario
+        } else {
+          alert("Usuario o contraseña incorrectos. Inténtalo de nuevo.");
+          return false; // Detener el envío del formulario
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,95 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/tabla_producto.css" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
+      <nav class="main-nav">
+        <h2>Administrador</h2>
+        <a class="link-item" href="tabla_productos.html">Productos</a>
+        <a class="link-item" href="ingresar_producto.html">Nuevo</a>
 
-        <h1 class="logo">GuitarraShop</h1>
-
-        <nav>
-            <a href="index.html" class="button_menu">Inicio</a>
-            <a href="templates/quienes_somos.html" class="button_menu">Quienes Somos</a>
-            <a href="templates/instrumentos.html" class="button_menu">Guitarras</a>
-            <a href="templates/Contacto.html" class="button_menu">Contacto</a>
-            <a href="templates/locales.html" class="button_menu">Nuestros Locales</a>
-        </nav>
-
+        <a class="link-item" href="../index.html">Volver a Inicio</a>
+      </nav>
     </header>
 
     <main>
+      <section class="container">
+        <div id="app">
+          <section v-if="error">Lo sentimos se produjo un error</section>
+          <section v-else>
+            <section v-if="cargando">
+              <p>Cargando .....</p>
+            </section>
 
-        <section class="container">
-            <div id="app">
+            <section v-else>
+              <div>
+                <table class="tabla">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Nombre</th>
+                      <th>Precio</th>
+                      <th>Tipo</th>
+                      <th>Stock</th>
+                      <th>Imagen</th>
+                      <th>Acciones</th>
+                      <th>Acciones</th>
+                    </tr>
+                  </thead>
 
-
-                <a class="nuevo" href="ingresar_producto.html">Nuevo</a>
-
-                <section v-if="error">Lo sentimos se produjo un error</section>
-                <section v-else>
-                    <section v-if="cargando">
-                        <p>Cargando .....</p>
-
-                    </section>
-
-                    <section v-else>
-
-                        <div>
-                            <table class="tabla">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Nombre</th>
-                                        <th>Precio</th>
-                                        <th>Tipo</th>
-                                        <th>Stock</th>
-                                        <th>Imagen</th>
-                                        <th>Acciones</th>
-                                        <th>Acciones</th>
-                                    </tr>
-                                </thead>
-                                
-                                <tbody>
-
-                                    <tr v-for="producto in productos">
-                                        <td>{{producto.id}}</td>
-                                        <td>{{producto.nombre}}</td>
-                                        <td>{{producto.precio}}</td>
-                                        <td>{{producto.tipo}}</td>
-                                        <td>{{producto.stock}}</td>
-                                        <td>
-                                            <img :src="producto.imagen" alt="" class="guitarras_img">
-                                        </td>
-                                        <td>
-                                            <button type="button" v-on:click="eliminar(producto.id)">Eliminar</button>
-                                        </td>
-                                        <td>
-                                            <a class="boton" :href="'editar_producto.html?id='+ producto.id+'&nombre=' +producto.nombre+'&tipo='+producto.tipo+'&precio='+producto.precio+'&stock='+producto.stock +  '&imagen='+producto.imagen">Editar</a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </section>
-                </section>
-
-            </div>
-        </section>
-
+                  <tbody>
+                    <tr v-for="producto in productos">
+                      <td>{{producto.id}}</td>
+                      <td>{{producto.nombre}}</td>
+                      <td>{{producto.precio}}</td>
+                      <td>{{producto.tipo}}</td>
+                      <td>{{producto.stock}}</td>
+                      <td>
+                        <img :src="producto.imagen" alt="" />
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          v-on:click="eliminar(producto.id)"
+                        >
+                          Eliminar
+                        </button>
+                      </td>
+                      <td>
+                        <a
+                          class="boton"
+                          :href="'editar_producto.html?id='+ producto.id+'&nombre=' +producto.nombre+'&tipo='+producto.tipo+'&precio='+producto.precio+'&stock='+producto.stock +  '&imagen='+producto.imagen"
+                          >Editar</a
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </section>
+        </div>
+      </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div class="copyRight">
+        <p>&copy; GuitarraShop Arg 2024</p>
+      </div>
+      <div class="sociales">
+        <a href=""
+          ><img src="/img/instagram.png" alt="Instagarm" class="social"
+        /></a>
+        <a href=""
+          ><img src="/img/whatsapp.png" alt="whatsapp" class="social"
+        /></a>
+        <a href=""
+          ><img src="/img/facebook.png" alt="facebook" class="social"
+        /></a>
+      </div>
+    </footer>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="../js/tabla_productos.js"></script>
-    
-</body>
-
+  </body>
 </html>
