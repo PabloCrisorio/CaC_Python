@@ -10,7 +10,7 @@
   </head>
   <body>
     <header>
-      <p class="logo">GuitarraShop</p>
+      <h1>GuitarraShop</h1>
       <nav>
         <a href="../index.html" class="button_menu">Inicio</a>
         <a href="quienes_somos.html" class="button_menu">Quienes Somos</a>
@@ -23,26 +23,22 @@
 
     <div class="login-box">
       <h1>Iniciar sesión</h1>
-      <form
-        action="tabla_productos.html"
-        method="post"
-        onsubmit="return validarFormulario()"
-      >
+      <form>
         <label for="usuario">Usuario:</label>
         <input type="text" id="usuario" name="usuario" required />
 
         <label for="contrasena">Contraseña:</label>
         <input type="password" id="contrasena" name="contrasena" required />
 
-        <input type="submit" value="Iniciar sesión" />
+        <input
+          type="button"
+          value="Iniciar sesión"
+          onclick="validarCredenciales()"
+        />
       </form>
       <h3>Los datos para ingresar son:</h3>
       <p>Usuario: codo</p>
       <p>contraseña: acodo</p>
-      <p>Si no func apresione el boton admin</p>
-      <button>
-        <a href="tabla_productos.html">Admin</a>
-      </button>
     </div>
 
     <footer>
@@ -62,18 +58,16 @@
       </div>
     </footer>
     <script>
-      function validarFormulario() {
-        const usuarioInput = document.getElementById("usuario");
-        const contrasenaInput = document.getElementById("contrasena");
+      function validarCredenciales() {
+        const usuario = document.getElementById("usuario").value;
+        const contrasena = document.getElementById("contrasena").value;
 
-        const usuario = usuarioInput.value;
-        const contrasena = contrasenaInput.value;
-
+        // Verifica las credenciales (usuario: "codo", contraseña: "acodo")
         if (usuario === "codo" && contrasena === "acodo") {
-          return true; // Continuar con el envío del formulario
+          // Redirige al usuario a la página "tabla_productos.html"
+          window.location.href = "tabla_productos.html";
         } else {
-          alert("Usuario o contraseña incorrectos. Inténtalo de nuevo.");
-          return false; // Detener el envío del formulario
+          alert("Credenciales incorrectas. Inténtalo de nuevo.");
         }
       }
     </script>
