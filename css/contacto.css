@@ -46,6 +46,10 @@ a {
 
 /*formulario*/
 
+h3 {
+  text-align: center;
+}
+
 button {
   font-size: 1em;
   font-weight: bold;
@@ -58,7 +62,7 @@ button {
 }
 
 .formulario .container {
-  max-width: 500px;
+  max-width: 900px;
   margin: auto;
   margin-top: 20px;
   padding: 20px;
