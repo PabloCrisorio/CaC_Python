@@ -1,0 +1,90 @@
+.main-nav h2 {
+  color: white;
+  padding: 10px;
+}
+.main-nav {
+  background-color: rgb(34, 150, 189);
+  text-align: center;
+}
+
+.link-item {
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.link-item:hover {
+  background-color: rgb(99, 199, 233);
+}
+
+nav a {
+  font-size: 1.2rem;
+  color: white;
+}
+
+/*tabla*/
+
+/* Estilos para la tabla */
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla th,
+.tabla td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+.tabla th {
+  background-color: #d6eeee;
+}
+
+.tabla tr:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+
+.tabla a.boton {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.tabla a.boton:hover {
+  background-color: red;
+}
+img {
+  width: 20%; /* Cambia al porcentaje deseado */
+  height: auto;
+}
+
+/*fotter*/
+
+footer {
+  background-color: rgb(34, 150, 189);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.copyRight {
+  font-size: 14px;
+}
+
+.sociales {
+  margin-top: 10px;
+}
+
+.social {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
