@@ -23,7 +23,11 @@
 
     <div class="login-box">
       <h1>Iniciar sesión</h1>
-      <form action="" method="post">
+      <form
+        action="tabla_productos.html"
+        method="post"
+        onsubmit="return validarFormulario()"
+      >
         <label for="usuario">Usuario:</label>
         <input type="text" id="usuario" name="usuario" required />
 
@@ -32,6 +36,13 @@
 
         <input type="submit" value="Iniciar sesión" />
       </form>
+      <h3>Los datos para ingresar son:</h3>
+      <p>Usuario: codo</p>
+      <p>contraseña: acodo</p>
+      <p>Si no func apresione el boton admin</p>
+      <button>
+        <a href="tabla_productos.html">Admin</a>
+      </button>
     </div>
 
     <footer>
@@ -50,5 +61,21 @@
         /></a>
       </div>
     </footer>
+    <script>
+      function validarFormulario() {
+        const usuarioInput = document.getElementById("usuario");
+        const contrasenaInput = document.getElementById("contrasena");
+
+        const usuario = usuarioInput.value;
+        const contrasena = contrasenaInput.value;
+
+        if (usuario === "codo" && contrasena === "acodo") {
+          return true; // Continuar con el envío del formulario
+        } else {
+          alert("Usuario o contraseña incorrectos. Inténtalo de nuevo.");
+          return false; // Detener el envío del formulario
+        }
+      }
+    </script>
   </body>
 </html>
