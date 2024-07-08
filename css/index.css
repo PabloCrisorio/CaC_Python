@@ -43,6 +43,9 @@ a {
 }
 
 /*boddy*/
+main{
+  overflow: auto;
+}
 button {
   font-size: 15px;
   font-weight: bold;
@@ -79,6 +82,7 @@ button:hover {
   flex-direction: column;
   height: 45vh;
   color: blueviolet;
+  
   background-image: url("../img/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
