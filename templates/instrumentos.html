@@ -55,6 +55,51 @@
           </div>
         </div>
       </section>
+
+
+      <h2 class="title">Nuestras guitarra.</h2>
+      <section class="container">
+        <div id="app">
+          <section v-if="error">Lo sentimos se produjo un error</section>
+          <section v-else>
+            <section v-if="cargando">
+              <p>Cargando .....</p>
+            </section>
+
+            <section v-else>
+              <div>
+                <table class="tabla">
+                  <thead>
+                    <tr>
+                      
+                      <th>Nombre</th>
+                      <th>Precio</th>
+                      <th>Tipo</th>
+                      
+                      <th>Imagen</th>
+                      
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr v-for="producto in productos">
+                      
+                      <td>{{producto.nombre}}</td>
+                      <td>{{producto.precio}}</td>
+                      <td>{{producto.tipo}}</td>
+                      
+                      <td>
+                        <img :src="producto.imagen" alt="" />
+                      </td>
+                      
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </section>
+        </div>
+      </section>
     </main>
 
     <footer>
@@ -73,5 +118,7 @@
         /></a>
       </div>
     </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../js/tabla_productos.js"></script>
   </body>
 </html>
