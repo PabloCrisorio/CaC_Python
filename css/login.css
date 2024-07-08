@@ -16,31 +16,30 @@ header {
   justify-content: center;
 }
 
-.logo {
-  margin: 0;
-  padding: 5px 10px;
-  font-weight: bold;
-  color: blueviolet;
-  font-size: 4em;
-}
-nav {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 10px 0px;
+/*menu*/
+
+header {
+  background-color: blueviolet;
+  color: white;
+  text-align: center;
 }
 
 .button_menu {
-  background-color: blueviolet;
-  border-radius: 12px;
-  padding: 5px 12px;
+  margin: 0 10px;
+  padding: 5px 10px; 
   text-decoration: none;
-  color: rgb(255, 255, 255);
+  color: white;
+  transition: color 0.3s, margin 0.3s, padding 0.3s;
 }
+
 .button_menu:hover {
-  box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.59);
-  color: rgb(255, 255, 255);
+  color: white;
+  margin: 0 15px; 
+  padding: 8px 12px;
+}
+
+a {
+  font-size: 1.2rem;
 }
 
 /* estilos log in */
@@ -65,8 +64,8 @@ input[type="password"] {
   border-radius: 5px;
 }
 
-input[type="submit"] {
-  background-color: #333;
+input[type="button"] {
+  background-color: rgb(75, 33, 117);
   color: #fff;
   border: none;
   padding: 10px 20px;

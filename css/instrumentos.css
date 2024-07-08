@@ -7,19 +7,51 @@ body {
   width: 100vw;
 }
 /*header style*/
+header {
+  background-color: rgb(245, 245, 245);
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*menu*/
+
+header {
+  background-color: blueviolet;
+  color: white;
+  text-align: center;
+}
+
+.button_menu {
+  margin: 0 10px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s, margin 0.3s, padding 0.3s;
+}
 
 .button_menu:hover {
-  box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.59);
-  color: blueviolet;
+  color: white;
+  margin: 0 15px;
+  padding: 8px 12px;
+}
+
+a {
+  font-size: 1.2rem;
 }
 
 /*card*/
 
+
 .title {
   text-align: center;
-  font-size: 15px;
-  color: black;
-  margin-top: 10px;
+  font-size: 30px;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  background-color: blueviolet;
 }
 
 #nuestros-modelos .container {
@@ -70,178 +102,125 @@ button {
   box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
-/*footer styles */
+/*fotter*/
+
 footer {
   display: flex;
-  background-color: rgb(245, 245, 245);
+  background-color: blueviolet;
   width: 100%;
   height: 7%;
   bottom: 0;
   left: 0;
+  color: white;
 }
-
+.copyRight {
+  width: 50%;
+  text-align: center;
+}
 .sociales {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 50%;
 }
+.social {
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+}
 
-@media screen and (max-width: 426px) {
+.social:hover {
+  width: 45px;
+  height: 45px;
+  box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.59);
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media screen and (max-width: 768px) {
   header {
-    background-color: rgb(245, 245, 245);
-    height: 35%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    height: 40%;
   }
+
+  .title {
+    font-size: 20px;
+  }
+  /* Estilos para el menú */
   nav {
-    width: 100%;
-    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 10px 0px;
+    align-items: center; /* Alinea los elementos verticalmente */
   }
+
   .button_menu {
-    background-color: rgba(128, 109, 7, 0.26);
-    border-radius: 12px;
-    padding: 5px 12px;
-    font-size: 10px;
+    margin: 5px;
+    padding: 5px;
     text-decoration: none;
-    color: black;
+    color: white;
+  }
+
+  .button_menu:hover {
+    color: white;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+  .carta img {
+    width: 60%;
+    height: auto;
+  }
+  .carta {
+    width: 250px;
+    height: 300px;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  header {
+    height: 28%;
+  }
+
+  .button_menu {
     margin: 2px;
+    padding: 2px;
+    text-decoration: none;
+    color: white;
   }
-  .logo {
-    margin: 0;
-    padding: 5px 10px;
-    font-weight: bold;
-    color: blueviolet;
-    font-size: 2.5em;
+
+  a {
+    font-size: 0.8rem;
   }
-  .carta p {
-    padding: 0 1rem;
-    font-size: 13px;
-    font-weight: 300;
-    color: black;
+
+  .title {
+    font-size: 15px;
   }
-  .copyRight {
-    width: 50%;
-    text-align: center;
-    font-size: 10px;
+  .carta {
+    width: 150px;
+    height: auto;
   }
+  h4 {
+    font-size: 14px;
+  }
+  p {
+    font-size: 12px;
+  }
+
   .social {
     width: 20px;
     height: 20px;
-  }
-  .social:hover {
-    width: 25px;
-    height: 25px;
-    box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.59);
-  }
-}
-@media screen and (min-width: 426px) {
-  header {
-    background-color: rgb(245, 245, 245);
-    height: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  nav {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 10px 0px;
-  }
-  .button_menu {
-    background-color: rgba(128, 109, 7, 0.26);
-    border-radius: 12px;
-    padding: 5px 12px;
-    text-decoration: none;
-    color: black;
-  }
-  .logo {
-    margin: 0;
-    padding: 5px 10px;
-    font-weight: bold;
-    color: blueviolet;
-    font-size: 4em;
-  }
-  .carta p {
-    padding: 0 1rem;
-    font-size: 15px;
-    font-weight: 300;
-    color: black;
-  }
-  .copyRight {
-    width: 50%;
-    text-align: center;
-    font-size: 15px;
-  }
-  .social {
-    width: 25px;
-    height: 25px;
-  }
-  .social:hover {
-    width: 35px;
-    height: 35px;
-    box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.59);
-  }
-}
-@media screen and (min-width: 769px) {
-  header {
-    background-color: rgb(245, 245, 245);
-    height: 20%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin: 0 2px;
   }
 
-  .logo {
-    margin: 0;
-    padding: 5px 10px;
-    font-weight: bold;
-    color: blueviolet;
-    font-size: 4em;
-  }
-  nav {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 10px 0px;
-  }
-
-  .button_menu {
-    background-color: rgba(128, 109, 7, 0.26);
-    border-radius: 12px;
-    padding: 5px 12px;
-    text-decoration: none;
-    color: black;
-  }
-  .carta p {
-    padding: 0 1rem;
-    font-size: 16px;
-    font-weight: 300;
-    color: black;
-  }
-  .copyRight {
-    width: 50%;
-    text-align: center;
-    font-size: 1em;
-  }
-  .social {
-    width: 35px;
-    height: 35px;
-  }
   .social:hover {
-    width: 45px;
-    height: 45px;
-    box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.59);
-  }
+  width: 25px;
+  height: 25px;
+  box-shadow: 0px 0px 30px 3px rgba(0, 0, 0, 0.59);
+}
 }

@@ -27,7 +27,8 @@ nav a {
 
 /* Estilos para la tabla */
 .tabla {
-  width: 100%;
+  margin: 10px;
+  width: 98%;
   border-collapse: collapse;
 }
 
@@ -36,6 +37,7 @@ nav a {
   border: 1px solid black;
   padding: 10px;
   text-align: center;
+  max-width: 80px;
 }
 
 .tabla th {
@@ -59,7 +61,7 @@ nav a {
   background-color: red;
 }
 img {
-  width: 20%; /* Cambia al porcentaje deseado */
+  width: 20%;
   height: auto;
 }
 
