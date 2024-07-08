@@ -44,6 +44,7 @@ a {
 
 /*boddy*/
 main{
+  min-height: auto;
   overflow: auto;
 }
 button {
